@@ -2,23 +2,31 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ElementSample</title>
   </head>
   <body>
-    <div id="display">ここに何かが表示される</div>
-    <button id="button">ボタンをクリック</button>
+    <div id="cards-container">
+      <div class="card" id="primary-card">こんにちは</div>
+      <div class="card">こんばんは</div>
+    </div>
 
     <script>
-      const display = document.getElementById("display")
-      const button = document.getElementById("button")
-      let count = 0
+      const card = document.querySelector(".card")
+      card.classList.add("nice-card")
+      card.classList.remove("nice-card")
+      const card = document.createElement("div")
+      card.className = "card"
+      card.textContent = "こんばんは"
 
-      button.onclick = function() {
-        count += 1
-        display.textContent = count
-      }
+      const cardsContainer = document.getElementById("cards-container")
+
+      const card = document.createElement("div")
+      card.textContent = "おはよう"
+      card.className = "card"
+
+      cardsContainer.prepend(card)
     </script>
   </body>
 </html>

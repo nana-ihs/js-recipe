@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>私の出身はどこでしょう？</h1>
+    <button id="tokyo-button">東京</button>
+    <button id="saitama-button">埼玉</button>
+    <button id="kanagawa-button">神奈川</button>
+    <div id="display"></div>
+    <script>
+      const buttonTokyo = document.getElementById("tokyo-button")
+      const buttonSaitama = document.getElementById("saitama-button")
+      const buttonKanagawa = document.getElementById("kanagawa-button")
+
+      const display = document.getElementById("display")
+
+      buttonTokyo.onclick = function() {
+        display.textContent = "Try again!!"
+      }
+      buttonSaitama.onclick = function() {
+        display.textContent = "残念！もう一回！"
+      }
+      buttonKanagawa.onclick = function() {
+        display.textContent = "正解！神奈川出身＆在住です！！"
+      }
+    </script>
+  </body>
+</html>
