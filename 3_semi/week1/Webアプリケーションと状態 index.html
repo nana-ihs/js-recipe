@@ -38,6 +38,20 @@
 
         input.value = ""
       }
+
+      const input = document.getElementById("input")
+      const container = document.getElementById("container")
+      const addButton = document.getElementById("add-button")
+      const removeAllButton = document.getElementById("remove-all-button")
+
+      let list = []
+
+      removeAllButton.onclick = function() {
+        list = []
+        localStrage.list = JSON.stringify(list)
+
+        container.textContent = ""
+      }
     </script>
   </body>
 </html>
