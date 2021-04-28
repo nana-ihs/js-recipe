@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -15,16 +14,22 @@
       const addButton = document.getElementById("add-button")
       const memoContainer = document.getElementById("memo-container")
       let memos = []
-
+      const updateDisplay = function() {
+        for (let i = 0; i < memos.length; i++) {
+          const text = memos[i]
+          const div = document.createElement("div")
+          div.textContent = text
+          memoContainer.append(div)
+        }
+      }
+      //updateDisplay()​
       addButton.onclick = function() {
         console.log(memos)
         memos.push(input.value)
+        localStorage.memos=JSON.stringfy(memos)
         console.log(memos)
-        console.dir(input)
-        const text = input.value
-        const div = document.createElement("div")
-        div.textContent = text
-        memoContainer.append(div)
+        console.dir(input)​
+        updateDisplay()
       }
     </script>
   </body>
