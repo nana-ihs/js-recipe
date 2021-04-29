@@ -1,5 +1,5 @@
-.transition{
-    transition: all 1s;
+.transition {
+  transition: all 1s;
 }
 
 .square {
@@ -11,5 +11,9 @@
 .rounded {
   border-radius: 50px;
 }
-□ square = square
-○ circle = square + rounded
+
+.triangle {
+  border-left: 50px;
+  border-right: 50px;
+  border-bottom: 50px;
+}
