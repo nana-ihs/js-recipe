@@ -22,13 +22,16 @@
           memoContainer.append(div)
         }
       }
-      //updateDisplay()​
       addButton.onclick = function() {
         console.log(memos)
         memos.push(input.value)
-        localStorage.memos=JSON.stringfy(memos)
+        localStorage.memos = JSON.stringify(memos)
+        //配列memosに合わせてブラウザを更新
+        //1memoContainerを空にする
+        memoContainer.textContent = ""
         console.log(memos)
-        console.dir(input)​
+        console.dir(input)
+        //2memosの内容をmemoContainerの最後尾に入れる​
         updateDisplay()
       }
     </script>
